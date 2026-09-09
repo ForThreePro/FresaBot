@@ -1,11 +1,10 @@
-// FUNCION PARA REACCIONES COMPATIBLE
 const react = async (conn, m, text) => {
   try { await conn.sendMessage(m.chat, { react: { text: text, key: m.key } }) } catch {}
 }
 
 let handler = async (m, { conn, args }) => {
   try {
-    await react(conn, m, "👤")
+    await react(conn, m, "🍓")
 
     // Si menciona a alguien usa esa persona, si no usa al que escribió
     let who = m.mentionedJid && m.mentionedJid[0]? m.mentionedJid[0] : m.sender
@@ -21,33 +20,41 @@ let handler = async (m, { conn, args }) => {
     let money = user.money || 0
     let limit = user.limit || 0
     let registered = user.registered || false
-    let role = user.role || 'Principiante'
+    let role = user.role || 'Fresita Nueva'
 
     // Calcular XP para el siguiente nivel
     let reqXp = (level + 1) * 100
     let xpProgress = exp - (level * 100)
 
-    const caption = `╭─「 PERFIL DE USUARIO 」
-│
-│ 👤 *NOMBRE:* ${name}
-│ 📱 *NUMERO:* @${number}
-│ 🏷️ *RANGO:* ${role}
-│
-│ 📊 *NIVEL:* ${level}
-│ ⭐ *EXP:* ${xpProgress}/${reqXp}
-│ 💰 *DINERO:* $${money}
-│ 💎 *DIAMANTES:* ${limit}
-│
-│ ✅ *REGISTRO:* ${registered? 'Si' : 'No'}
-│
-╰───────────────────────`
+    const caption = `🍓 𓆩 ***𝗣𝗘𝗥𝗙𝗜𝗟 𝗗𝗘 𝗨𝗦𝗨𝗔𝗥𝗜𝗢*** 𓆪 🍓
+
+.⃟𖥔 ݁. 𖦹˙— \`\`FRESITA PROFILE\`\` —˙𖦹.🍓꒷
+
+ *⤷ ┇ ***DATOS*** ：✿ 。
+
+──🍓 *INFORMACION* ╏ 💖
+💖 ➛ *Nombre:* ${name}
+💖 ➛ *Numero:* @${number}
+💖 ➛ *Rango:* ${role}
+
+──🍓 *ESTADISTICAS* ╏ 🌸
+🌸 ➛ *Nivel:* ${level}
+🌸 ➛ *Exp:* ${xpProgress}/${reqXp}
+🌸 ➛ *Dinero:* $${money}
+🌸 ➛ *Diamantes:* ${limit}
+
+──🍓 *REGISTRO* ╏ 💖
+💖 ➛ *Estado:* ${registered? 'Registrada ✅' : 'No registrada ❌'}
+
+━━━━━━━━━━━
+*Powered by*: ***FRESITA BOT*** 🍓`
 
     // Obtener foto de perfil
     let pp
     try {
       pp = await conn.profilePictureUrl(who, 'image')
     } catch {
-      pp = 'https://i.ibb.co/1p9Q0V3/default.jpg' // imagen por defecto
+      pp = 'https://files.evogb.win/xwKr8q.jpg' // imagen fresita por defecto
     }
 
     await conn.sendMessage(m.chat, {
