@@ -5,7 +5,7 @@ const handler = async (m, { isOwner, isAdmin, conn, participants, args }) => {
       return;
     }
 
-    const customMessage = args.join(' ') || '📢 INVOCACIÓN GENERAL'
+    const customMessage = args.join(' ') || '📢 INVOCACIÓN GENERAL 🍓'
     const groupMetadata = await conn.groupMetadata(m.chat).catch(() => ({ subject: 'Grupo', participants: [] }))
     const groupName = groupMetadata.subject
 
@@ -53,16 +53,16 @@ const handler = async (m, { isOwner, isAdmin, conn, participants, args }) => {
     // Ordenar las banderas según el orden definido
     const orderedFlags = countryFlags.map(c => c.bandera).concat(['🚩'])
 
-    // Texto con diseño GARFIELD BOT OFICIAL
-    let messageText = `🐱 𓆩 𝗜𝗡𝗩𝗢𝗖𝗔𝗖𝗜𝗢𝗡 𝗚𝗘𝗡𝗘𝗥𝗔𝗟 𓆪 🐱
+    // Texto con diseño FRESITA BOT
+    let messageText = `🍓 𓆩 ***𝗜𝗡𝗩𝗢𝗖𝗔𝗖𝗜𝗢𝗡 𝗚𝗘𝗡𝗘𝗥𝗔𝗟*** 𓆪 🍓
 
-.⃟𖥔 ݁. 𖦹˙— \`\` ${groupName} \`\` —˙𖦹.🍕꒷
+.⃟𖥔 ݁. 𖦹˙— \`\` ${groupName} \`\` —˙𖦹.🍓꒷
 
-──🍃 *𝗜𝗡𝗙𝗢* ╏ 💚
-💚 ➛ *Integrantes:* ${participants.length}
-💚 ➛ *Mensaje:* ${customMessage}
+──🍓 *𝗜𝗡𝗙𝗢* ╏ 💖
+💖 ➛ *Integrantes:* ${participants.length}
+💖 ➛ *Mensaje:* ${customMessage}
 
-──🍃 *𝗠𝗜𝗘𝗠𝗕𝗥𝗢𝗦 𝗣𝗢𝗥 𝗣𝗔𝗜𝗦* ╏ 🌿
+──🍓 *𝗠𝗜𝗘𝗠𝗕𝗥𝗢𝗦 𝗣𝗢𝗥 𝗣𝗔𝗜𝗦* ╏ 🌸
 `
 
     for (const flag of orderedFlags) {
@@ -77,13 +77,12 @@ const handler = async (m, { isOwner, isAdmin, conn, participants, args }) => {
 
     messageText += `
 ━━━━━━━━━━━
-*Powered by*: ***Garfield Bot Oficial*** 🍕
-*Owner*: @whois.yallico`
+*Powered by*: ***FRESITA BOT*** 🍓`
 
-    // IMAGENES ROTATORIAS
+    // IMAGENES FRESITA ROTATORIAS
     const images = [
-      'https://files.evogb.win/QFXQtu.jpg',
-      'https://files.evogb.win/E2yVdA.jpg'
+      'https://files.evogb.win/xwKr8q.jpg',
+      'https://files.evogb.win/xwKr8q.jpg' // puedes agregar más fresitas aquí
     ]
     const imageUrl = { url: images[Math.floor(Math.random() * images.length)] }
 
