@@ -15,8 +15,8 @@ let handler = async (m, { conn, text, usedPrefix, command, args }) => {
         if (!img) return error('Responde a un *sticker*')
 
         try {
-            let stiker = await addExif(img, packname || '***Garfield Bot Oficial***', author || '')
-            await conn.sendFile(m.chat, stiker, 'garfield.webp', '', m)
+            let stiker = await addExif(img, packname || '***FRESITA BOT*** 🍓', author || 'Fresita')
+            await conn.sendFile(m.chat, stiker, 'fresita.webp', '', m)
             await m.react('✅')
         } catch (e) {
             console.error(e)
@@ -31,8 +31,8 @@ let handler = async (m, { conn, text, usedPrefix, command, args }) => {
         let mime = (q.msg || q).mimetype || q.mediaType || ''
         if (!/webp|image|video/g.test(mime)) return error('Responde a una *imagen, video o gif*')
         let img = await q.download()
-        let stiker = await sticker(img, false, '***Garfield Bot Oficial***', '')
-        await conn.sendFile(m.chat, stiker, 'garfield.webp', '', m)
+        let stiker = await sticker(img, false, '***FRESITA BOT*** 🍓', 'Fresita')
+        await conn.sendFile(m.chat, stiker, 'fresita.webp', '', m)
         await m.react('✅')
     }
 
@@ -48,13 +48,13 @@ let handler = async (m, { conn, text, usedPrefix, command, args }) => {
             const [authorNameRaw,...textParts] = joined.split("/")
             authorName = authorNameRaw?.trim() || "Anónimo"
             txt = textParts.join("/").trim()
-            pp = await conn.profilePictureUrl(mentionedJid, 'image').catch(_ => 'https://telegra.ph/file/320b066dc81928b782c7b.png')
+            pp = await conn.profilePictureUrl(mentionedJid, 'image').catch(_ => 'https://files.evogb.win/xwKr8q.jpg')
         } else if (!mentionedJid && args.join(" ").includes("/")) {
             const joined = args.join(" ")
             const [authorNameRaw,...textParts] = joined.split("/")
             authorName = authorNameRaw?.trim() || "Anónimo"
             txt = textParts.join("/").trim()
-            pp = "https://files.catbox.moe/dpeqsr.jpg"
+            pp = "https://files.evogb.win/xwKr8q.jpg"
         } else if (!mentionedJid && args.length >= 1) {
             txt = args.join(" ")
             try {
@@ -62,7 +62,7 @@ let handler = async (m, { conn, text, usedPrefix, command, args }) => {
             } catch {
                 authorName = "Anónimo"
             }
-            pp = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://telegra.ph/file/320b066dc81928b782c7b.png')
+            pp = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://files.evogb.win/xwKr8q.jpg')
         } else if (m.quoted && m.quoted.text) {
             txt = m.quoted.text
             try {
@@ -70,7 +70,7 @@ let handler = async (m, { conn, text, usedPrefix, command, args }) => {
             } catch {
                 authorName = "Anónimo"
             }
-            pp = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://telegra.ph/file/320b066dc81928b782c7b.png')
+            pp = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://files.evogb.win/xwKr8q.jpg')
         } else {
             return error('Formato inválido')
         }
@@ -79,17 +79,17 @@ let handler = async (m, { conn, text, usedPrefix, command, args }) => {
         if (txt.length > 30) return error('Máximo *30 caracteres*')
 
         const obj = {
-            "type": "quote", "format": "png", "backgroundColor": "#000", "width": 512, "height": 768, "scale": 2,
+            "type": "quote", "format": "png", "backgroundColor": "#FFB6C1", "width": 512, "height": 768, "scale": 2,
             "messages": [{"entities": [], "avatar": true, "from": { "id": 1, "name": authorName || "Anónimo", "photo": { "url": pp } }, "text": txt, "replyMessage": {}}]
         }
 
         try {
             const json = await axios.post('https://btzqc.betabotz.eu.org/generate', obj, { headers: { 'Content-Type': 'application/json' }})
             const buffer = Buffer.from(json.data.result.image, 'base64')
-            const stiker = await sticker(buffer, false, '***Garfield Bot Oficial***', '')
+            const stiker = await sticker(buffer, false, '***FRESITA BOT*** 🍓', 'Fresita')
 
             if (stiker) {
-                await conn.sendFile(m.chat, stiker, 'garfieldqc.webp', '', m)
+                await conn.sendFile(m.chat, stiker, 'fresitaqc.webp', '', m)
                 await m.react('✅')
             } else {
                 await m.react('❌')
@@ -117,7 +117,7 @@ let handler = async (m, { conn, text, usedPrefix, command, args }) => {
     }
 
     function error(msg) {
-        let texto = `🐱 *𝗚𝗔𝗥𝗙𝗜𝗘𝗟𝗗 𝗕𝗢𝗧 𝗢𝗙𝗜𝗖𝗜𝗔𝗟 - 𝗦𝗧𝗜𝗖𝗞𝗘𝗥𝗦* 🐱
+        let texto = `🍓 *𝗙𝗥𝗘𝗦𝗜𝗧𝗔 𝗕𝗢𝗧 - 𝗦𝗧𝗜𝗖𝗞𝗘𝗥𝗦* 🍓
 
 *━━━━━━━━━━*
 *❌ ERROR*
@@ -125,8 +125,8 @@ let handler = async (m, { conn, text, usedPrefix, command, args }) => {
 *➤* ${msg}
 
 *━━━━━━━━━━*
-*Owner:* @whois.yallico
-> _"Algo salió mal"_ 💥`
+*Owner:* @56927308426
+> _"Algo salió mal"_ 💖`
         m.reply(texto)
     }
 }
