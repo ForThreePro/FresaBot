@@ -38,9 +38,9 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     const q = m.quoted || m
     const mime = (q.msg || q).mimetype || ''
 
-    if (!mime) return m.reply(`Responde a una imagen con: ${usedPrefix + command}`)
+    if (!mime) return m.reply(`🍓 *FRESITA BOT*\nResponde a una imagen con: ${usedPrefix + command}`)
     if (!/image\/(jpe?g|png)/.test(mime)) {
-      return m.reply(`Solo se acepta imagen JPG/PNG`)
+      return m.reply(`🍓 *FRESITA BOT*\nSolo se acepta imagen JPG/PNG 💖`)
     }
 
     try {
@@ -54,22 +54,22 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       // Enviar imagen HD
       await conn.sendMessage(m.chat, {
         image: hdBuffer,
-        caption: `*Resultado HD 2x*\nKey: proyectsV2`
+        caption: `🍓 *RESULTADO HD 2X*\n*Powered by:* FRESITA BOT 🍓\n*Key:* proyectsV2`
       }, { quoted: m })
 
       // Enviar también como documento
       await conn.sendMessage(m.chat, {
         document: hdBuffer,
-        fileName: 'hd.png',
+        fileName: 'fresita-hd.png',
         mimetype: 'image/png',
-        caption: `Documento HD 2x`
+        caption: `Documento HD 2x 🍓`
       }, { quoted: m })
 
       await m.react('✅')
 
     } catch (err) {
       await m.react('❌')
-      await m.reply(`Error: ${err.message || err}`)
+      await m.reply(`🍓 *FRESITA BOT*\n❌ Error: ${err.message || err}`)
     }
 }
 
