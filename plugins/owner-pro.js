@@ -1,17 +1,17 @@
 import { exec } from "child_process"
 
 let handler = async (m, { conn, command }) => {
-    const owner = "@whois.yallico"
+    const owner = "@56927308426"
 
     // 1. RESET
     if (command === 'reset') {
         await m.react('🔄')
-        await m.reply(`🐱 *𝗚𝗔𝗥𝗙𝗜𝗘𝗟𝗗 𝗕𝗢𝗧 𝗢𝗙𝗜𝗖𝗜𝗔𝗟 - 𝗥𝗘𝗦𝗘𝗧* 🐱
+        await m.reply(`🍓 *𝗙𝗥𝗘𝗦𝗜𝗧𝗔 𝗕𝗢𝗧 - 𝗥𝗘𝗦𝗘𝗧* 🍓
 
 *━━━━━━━━━━*
 *🔄 REINICIANDO SISTEMA*
 
-> _Por favor espera unos segundos..._
+> _Por favor espera unos segundos..._ 💖
 
 *━━━━━━━━━━*`)
         process.send('reset')
@@ -22,17 +22,17 @@ let handler = async (m, { conn, command }) => {
         try {
             await m.react('👑')
             await conn.groupParticipantsUpdate(m.chat, [conn.user.jid], 'promote')
-            await m.reply(`🐱 *𝗚𝗔𝗥𝗙𝗜𝗘𝗟𝗗 𝗕𝗢𝗧 𝗢𝗙𝗜𝗖𝗜𝗔𝗟 - 𝗔𝗗𝗠𝗜𝗡* 🐱
+            await m.reply(`🍓 *𝗙𝗥𝗘𝗦𝗜𝗧𝗔 𝗕𝗢𝗧 - 𝗔𝗗𝗠𝗜𝗡* 🍓
 
 *━━━━━━━━━━*
 *✅ ADMINISTRADOR ASIGNADO*
 
-*➤* Ya tengo poderes de *admin* en este grupo
+*➤* Ya tengo poderes de *admin* en este grupo 🍓
 
 *━━━━━━━━━━*`)
         } catch (e) {
             await m.react('❌')
-            m.reply(`🐱 *𝗚𝗔𝗥𝗙𝗜𝗘𝗟𝗗 𝗕𝗢𝗧 𝗢𝗙𝗜𝗖𝗜𝗔𝗟* 🐱
+            m.reply(`🍓 *𝗙𝗥𝗘𝗦𝗜𝗧𝗔 𝗕𝗢𝗧* 🍓
 
 *━━━━━━━━━━*
 *❌ ERROR*
@@ -48,19 +48,19 @@ let handler = async (m, { conn, command }) => {
     if (command === 'update' || command === 'actualizar' || command === 'fix') {
         if (m.react) await m.react('🌀')
 
-        await conn.reply(m.chat, `🐱 *𝗚𝗔𝗥𝗙𝗜𝗘𝗟𝗗 𝗕𝗢𝗧 𝗢𝗙𝗜𝗖𝗜𝗔𝗟 - 𝗨𝗣𝗗𝗔𝗧𝗘* 🐱
+        await conn.reply(m.chat, `🍓 *𝗙𝗥𝗘𝗦𝗜𝗧𝗔 𝗕𝗢𝗧 - 𝗨𝗣𝗗𝗔𝗧𝗘* 🍓
 
 *━━━━━━━━━━*
 *🌀 ACTUALIZANDO MODULOS*
 
-> _Obteniendo cambios del repositorio..._
+> _Obteniendo cambios del repositorio..._ 🌸
 
 *━━━━━━━━━━*`, m)
 
         exec('git pull', async (err, stdout, stderr) => {
             if (err) {
                 if (m.react) await m.react('❌')
-                return conn.reply(m.chat, `🐱 *𝗚𝗔𝗥𝗙𝗜𝗘𝗟𝗗 𝗕𝗢𝗧 𝗢𝗙𝗜𝗖𝗜𝗔𝗟* 🐱
+                return conn.reply(m.chat, `🍓 *𝗙𝗥𝗘𝗦𝗜𝗧𝗔 𝗕𝗢𝗧* 🍓
 
 *━━━━━━━━━━*
 *❌ ERROR EN LA ACTUALIZACION*
@@ -74,7 +74,7 @@ let handler = async (m, { conn, command }) => {
 
             if (stdout.includes('Already up to date.')) {
                 if (m.react) await m.react('✅')
-                return conn.reply(m.chat, `🐱 *𝗚𝗔𝗥𝗙𝗜𝗘𝗟𝗗 𝗕𝗢𝗧 𝗢𝗙𝗜𝗖𝗜𝗔𝗟* 🐱
+                return conn.reply(m.chat, `🍓 *𝗙𝗥𝗘𝗦𝗜𝗧𝗔 𝗕𝗢𝗧* 🍓
 
 *━━━━━━━━━━*
 *✅ SISTEMA ACTUALIZADO*
@@ -86,7 +86,7 @@ let handler = async (m, { conn, command }) => {
             }
 
             if (m.react) await m.react('✅')
-            return conn.reply(m.chat, `🐱 *𝗚𝗔𝗥𝗙𝗜𝗘𝗟𝗗 𝗕𝗢𝗧 𝗢𝗙𝗜𝗖𝗜𝗔𝗟* 🐱
+            return conn.reply(m.chat, `🍓 *𝗙𝗥𝗘𝗦𝗜𝗧𝗔 𝗕𝗢𝗧* 🍓
 
 *━━━━━━━━━━*
 *✅ ACTUALIZACION APLICADA*
