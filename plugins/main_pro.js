@@ -10,31 +10,27 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 
     // OWNER
     if (command === 'owner' || command === 'creator') {
-        let owner = '51927174369@s.whatsapp.net'
+        let owner = '56927308426@s.whatsapp.net'
         let texto = `
-🐱 *𓆩 DUEÑO DEL BOT 𓆪* 🐱
+🍓 *𓆩 ***DUEÑA DEL BOT*** 𓆪* 🍓
 
-.⃟𖥔 ݁. 𖦹˙— *\`\`OWNER\`\`* —˙𖦹.🍃꒷
+.⃟𖥔 ݁. 𖦹˙— *\`\`OWNER\`\`* —˙𖦹.🍓꒷
 
- *⤷ ┇ INFORMACION* ：✿ 。
+ *⤷ ┇ ***INFORMACION*** ：✿ 。
 
-──🍃 *CONTACTO* ╏ 💚
-💚 ➛ *Owner:* @${owner.split('@')[0]}
-💚 ➛ *Numero:* +51 927 174 369
+──🍓 *CONTACTO* ╏ 💖
+💖 ➛ *Owner:* @${owner.split('@')[0]}
+💖 ➛ *Numero:* +56 9 2730 8426
 
-──🍃 *NOTA* ╏ 🌿
-🌿 ➛ *Contacta solo para cosas importantes*
+──🍓 *NOTA* ╏ 🌸
+🌸 ➛ *Contacta solo para cosas importantes* 💖
 
 ━━━━━━━━━━━
-*Owner*: @51927174369
-> *"Garfield está disponible para la lasaña"* 🍕`
+*Owner*: @56927308426
+> *"Fresita está disponible para los postres"* 🍓`
 
-        // Rota las 2 fotos
-        const images = [
-            'https://files.evogb.win/QFXQtu.jpg',
-            'https://files.evogb.win/E2yVdA.jpg'
-        ]
-        let img = { url: images[Math.floor(Math.random() * images.length)] }
+        // Foto nueva
+        let img = { url: 'https://files.evogb.win/xwKr8q.jpg' }
 
         await m.react('✅')
         return conn.sendMessage(m.chat, {
@@ -47,32 +43,28 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
     // PING
     if (command === 'ping' || command === 'p') {
         let start = new Date * 1
-        await conn.reply(m.chat, '🐱 *Calculando...*', m)
+        await conn.reply(m.chat, '🍓 *Calculando...*', m)
         let end = new Date * 1
         let speed = end - start
         let texto = `
-🐱 *𓆩 PING DE GARFIELD 𓆪* 🐱
+🍓 *𓆩 ***PING DE FRESITA*** 𓆪* 🍓
 
-.⃟𖥔 ݁. 𖦹˙— *\`\`VELOCIDAD\`\`* —˙𖦹.🍃꒷
+.⃟𖥔 ݁. 𖦹˙— *\`\`VELOCIDAD\`\`* —˙𖦹.🍓꒷
 
- *⤷ ┇ ESTADO* ：✿ 。
+ *⤷ ┇ ***ESTADO*** ：✿ 。
 
-──🍃 *ESTADISTICAS* ╏ 💚
-💚 ➛ *Velocidad:* ${speed}ms
-💚 ➛ *Estado:* Activo y durmiendo
+──🍓 *ESTADISTICAS* ╏ 💖
+💖 ➛ *Velocidad:* ${speed}ms
+💖 ➛ *Estado:* Activa y comiendo fresitas
 
-──🍃 *NOTA* ╏ 🌿
-🌿 ➛ *Servidor estable*
+──🍓 *NOTA* ╏ 🌸
+🌸 ➛ *Servidor estable*
 
 ━━━━━━━━━━━
-*Owner*: @51927174369
-> *"Respondo más rápido que un bostezo"* 🍃`
+*Owner*: @56927308426
+> *"Respondo más rápido que mordida a una fresa"* 🍓`
 
-        const images = [
-            'https://files.evogb.win/QFXQtu.jpg',
-            'https://files.evogb.win/E2yVdA.jpg'
-        ]
-        let img = { url: images[Math.floor(Math.random() * images.length)] }
+        let img = { url: 'https://files.evogb.win/xwKr8q.jpg' }
 
         await m.react('✅')
         return conn.sendMessage(m.chat, {
@@ -87,22 +79,22 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
             fs.readdirSync(tmpPath).forEach(file => fs.unlinkSync(`${tmpPath}/${file}`))
         }
         let texto = `
-🐱 *𓆩 ***Garfield Bot Oficial*** 𓆪* 🐱
+🍓 *𓆩 ***FRESITA BOT*** 𓆪* 🍓
 
-.⃟𖥔 ݁. 𖦹˙— *\`\`LIMPIEZA\`\`* —˙𖦹.🍃꒷
+.⃟𖥔 ݁. 𖦹˙— *\`\`LIMPIEZA\`\`* —˙𖦹.🍓꒷
 
- *⤷ ┇ CACHE PURIFICADO* ：✿ 。
+ *⤷ ┇ ***CACHE PURIFICADO*** ：✿ 。
 
-──🍃 *RESULTADO* ╏ 💚
-💚 ➛ *Caché temporal eliminado*
-💚 ➛ *Memoria liberada con éxito*
+──🍓 *RESULTADO* ╏ 💖
+💖 ➛ *Caché temporal eliminado*
+💖 ➛ *Memoria liberada con éxito*
 
-──🍃 *NOTA* ╏ 🌿
-🌿 ➛ *El bot está más ligero*
+──🍓 *NOTA* ╏ 🌸
+🌸 ➛ *El bot está más ligero*
 
 ━━━━━━━━━━━
-*Owner*: @51927174369
-> *"He limpiado mi cama para dormir mejor"* 🍕`
+*Owner*: @56927308426
+> *"Limpié mi cuarto para que huela a fresas"* 🍓`
         await m.react('✅')
         return m.reply(texto)
     }
@@ -110,21 +102,21 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
     if (command === 'cpu') {
         let cpu = os.loadavg()[0].toFixed(2)
         let texto = `
-🐱 *𓆩 ***Garfield Bot Oficial*** 𓆪* 🐱
+🍓 *𓆩 ***FRESITA BOT*** 𓆪* 🍓
 
-.⃟𖥔 ݁. 𖦹˙— *\`\`CPU\`\`* —˙𖦹.🍃꒷
+.⃟𖥔 ݁. 𖦹˙— *\`\`CPU\`\`* —˙𖦹.🍓꒷
 
- *⤷ ┇ ESTADO DEL PROCESADOR* ：✿ 。
+ *⤷ ┇ ***ESTADO DEL PROCESADOR*** ：✿ 。
 
-──🍃 *ESTADISTICAS* ╏ 💚
-💚 ➛ *Carga CPU:* ${cpu}%
+──🍓 *ESTADISTICAS* ╏ 💖
+💖 ➛ *Carga CPU:* ${cpu}%
 
-──🍃 *NOTA* ╏ 🌿
-🌿 ➛ *Si supera 90% el bot va lento*
+──🍓 *NOTA* ╏ 🌸
+🌸 ➛ *Si supera 90% el bot va lento*
 
 ━━━━━━━━━━━
-*Owner*: @51927174369
-> *"Mi energía está al ${cpu}% para comer lasaña"* 🍕`
+*Owner*: @56927308426
+> *"Mi energía está al ${cpu}% para hacer postres"* 🍓`
         await m.react('✅')
         return m.reply(texto)
     }
@@ -133,21 +125,21 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
         const used = process.memoryUsage()
         let ram = (used.heapUsed / 1024 / 1024).toFixed(2)
         let texto = `
-🐱 *𓆩 ***Garfield Bot Oficial*** 𓆪* 🐱
+🍓 *𓆩 ***FRESITA BOT*** 𓆪* 🍓
 
-.⃟𖥔 ݁. 𖦹˙— *\`\`RAM\`\`* —˙𖦹.🍃꒷
+.⃟𖥔 ݁. 𖦹˙— *\`\`RAM\`\`* —˙𖦹.🍓꒷
 
- *⤷ ┇ MEMORIA EN USO* ：✿ 。
+ *⤷ ┇ ***MEMORIA EN USO*** ：✿ 。
 
-──🍃 *ESTADISTICAS* ╏ 💚
-💚 ➛ *Consumo RAM:* ${ram} MB
+──🍓 *ESTADISTICAS* ╏ 💖
+💖 ➛ *Consumo RAM:* ${ram} MB
 
-──🍃 *NOTA* ╏ 🌿
-🌿 ➛ *Memoria usada por el proceso*
+──🍓 *NOTA* ╏ 🌸
+🌸 ➛ *Memoria usada por el proceso*
 
 ━━━━━━━━━━━
-*Owner*: @51927174369
-> *"Tengo suficiente RAM para seguir durmiendo"* 🍕`
+*Owner*: @56927308426
+> *"Tengo suficiente RAM para seguir horneando"* 🍓`
         await m.react('✅')
         return m.reply(texto)
     }
@@ -156,21 +148,21 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
         let _uptime = process.uptime() * 1000
         let uptime = clockString(_uptime)
         let texto = `
-🐱 *𓆩 ***Garfield Bot Oficial*** 𓆪* 🐱
+🍓 *𓆩 ***FRESITA BOT*** 𓆪* 🍓
 
-.⃟𖥔 ݁. 𖦹˙— *\`\`UPTIME\`\`* —˙𖦹.🍃꒷
+.⃟𖥔 ݁. 𖦹˙— *\`\`UPTIME\`\`* —˙𖦹.🍓꒷
 
- *⤷ ┇ TIEMPO ACTIVO* ：✿ 。
+ *⤷ ┇ ***TIEMPO ACTIVO*** ：✿ 。
 
-──🍃 *ESTADISTICAS* ╏ 💚
-💚 ➛ *Tiempo activo:* ${uptime}
+──🍓 *ESTADISTICAS* ╏ 💖
+💖 ➛ *Tiempo activo:* ${uptime}
 
-──🍃 *NOTA* ╏ 🌿
-🌿 ➛ *Desde que se inició el bot*
+──🍓 *NOTA* ╏ 🌸
+🌸 ➛ *Desde que se inició el bot*
 
 ━━━━━━━━━━━
-*Owner*: @51927174369
-> *"Llevo ronroneando ${uptime} sin parar"* 🍕`
+*Owner*: @56927308426
+> *"Llevo repartiendo fresitas ${uptime} sin parar"* 🍓`
         await m.react('✅')
         return m.reply(texto)
     }
@@ -183,24 +175,24 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
         let ram = (used.heapUsed / 1024 / 1024).toFixed(2)
 
         let texto = `
-🐱 *𓆩 ***Garfield Bot Oficial*** 𓆪* 🐱
+🍓 *𓆩 ***FRESITA BOT*** 𓆪* 🍓
 
-.⃟𖥔 ݁. 𖦹˙— *\`\`REPORTE DE SISTEMA\`\`* —˙𖦹.🍃꒷
+.⃟𖥔 ݁. 𖦹˙— *\`\`REPORTE DE SISTEMA\`\`* —˙𖦹.🍓꒷
 
- *⤷ ┇ ESTADO COMPLETO DEL BOT* ：✿ 。
+ *⤷ ┇ ***ESTADO COMPLETO DEL BOT*** ：✿ 。
 
-──🍃 *ESTADISTICAS* ╏ 💚
-💚 ➛ *Uptime:* ${muptime}
-💚 ➛ *Memoria RAM:* ${ram} MB
-💚 ➛ *Carga CPU:* ${cpu}%
+──🍓 *ESTADISTICAS* ╏ 💖
+💖 ➛ *Uptime:* ${muptime}
+💖 ➛ *Memoria RAM:* ${ram} MB
+💖 ➛ *Carga CPU:* ${cpu}%
 
-──🍃 *DETALLES* ╏ 🌿
-🌿 ➛ *Desarrollado por:* Sebastián Barboza
-🌿 ➛ *Estado:* Operativo
+──🍓 *DETALLES* ╏ 🌸
+🌸 ➛ *Desarrollado por:* Sebastián Barboza
+🌸 ➛ *Estado:* Operativo
 
 ━━━━━━━━━━━
-*Owner*: @51927174369
-> *"Todos mis sistemas están al 100% para la siesta"* 🍕`
+*Owner*: @56927308426
+> *"Todos mis sistemas están al 100% para hacer dulces"* 🍓`
         await m.react('✅')
         return m.reply(texto)
     }
@@ -211,22 +203,22 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 
         if (!txt) {
             let texto = `
-🐱 *𓆩 ***Garfield Bot Oficial*** 𓆪* 🐱
+🍓 *𓆩 ***FRESITA BOT*** 𓆪* 🍓
 
-.⃟𖥔 ݁. 𖦹˙— *\`\`ERROR\`\`* —˙𖦹.🍃꒷
+.⃟𖥔 ݁. 𖦹˙— *\`\`ERROR\`\`* —˙𖦹.🍓꒷
 
- *⤷ ┇ FALTA TEXTO* ：✿ 。
+ *⤷ ┇ ***FALTA TEXTO*** ：✿ 。
 
-──🍃 *USO* ╏ 💚
-💚 ➛ *Escribe el texto que deseas convertir a audio*
-💚 ➛ *O responde a un mensaje*
+──🍓 *USO* ╏ 💖
+💖 ➛ *Escribe el texto que deseas convertir a audio*
+💖 ➛ *O responde a un mensaje*
 
-──🍃 *EJEMPLO* ╏ 🌿
-🌿 ➛ ${usedPrefix}tts Hola, ¿cómo estás?
+──🍓 *EJEMPLO* ╏ 🌸
+🌸 ➛ ${usedPrefix}tts Hola, ¿cómo estás?
 
 ━━━━━━━━━━━
-*Owner*: @51927174369
-> *"Necesito escuchar tu maullido guerrero"* 🍕`
+*Owner*: @56927308426
+> *"Necesito escuchar tu voz de fresita"* 🍓`
             await m.react('❌')
             return m.reply(texto)
         }
@@ -241,20 +233,20 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
             timeout: 10000,
         })
 
-        let tmpFilePath = path.join(tmpdir(), `garfield-${Date.now()}.opus`)
+        let tmpFilePath = path.join(tmpdir(), `fresita-${Date.now()}.opus`)
 
         await new Promise((resolve, reject) => {
             ffmpeg(url)
-           .audioCodec('libopus')
-           .toFormat('opus')
-           .outputOptions([
+          .audioCodec('libopus')
+          .toFormat('opus')
+          .outputOptions([
                     '-avoid_negative_ts make_zero',
                     '-ac 1',
                     '-b:a 64k'
                 ])
-           .on('end', () => resolve(true))
-           .on('error', (err) => reject(err))
-           .save(tmpFilePath)
+          .on('end', () => resolve(true))
+          .on('error', (err) => reject(err))
+          .save(tmpFilePath)
         })
 
         let audioBuffer = fs.readFileSync(tmpFilePath)
