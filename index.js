@@ -3,7 +3,6 @@ import { createRequire } from 'module';
 import { fileURLToPath } from 'url';
 import { watchFile, unwatchFile, existsSync, mkdirSync } from 'fs';
 import cfonts from 'cfonts';
-import './plugins/serbot-serbot.js';
 import { createInterface } from 'readline';
 import yargs from 'yargs';
 import chalk from 'chalk';
@@ -47,7 +46,7 @@ const ejecutarProceso = (archivo) => {
 
   const rutaArchivo = join(__dirname, archivo);
   const argumentos = [rutaArchivo, ...process.argv.slice(2)];
-  
+
   procesoHijo = spawn('node', argumentos, { stdio: ['inherit', 'inherit', 'inherit', 'ipc'] });
 
   procesoHijo.on('message', codigo => {
